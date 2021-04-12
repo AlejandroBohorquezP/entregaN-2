@@ -1,0 +1,18 @@
+[
+  {
+    "idCurso": 8573,
+    "nombreCurso": "Piano complementario",
+    "descripcion": "Aprender piano desde la armonía funcional",
+    "valor": 120000,
+    "intensidad": "150",
+    "modalidad": "Virtual"
+  },
+  {
+    "idCurso": 1431,
+    "nombreCurso": "Lenguaje musical",
+    "descripcion": "Aprender de ritmo y a leer partitura",
+    "valor": 13432,
+    "intensidad": "142",
+    "modalidad": "Presencial"
+  }
+]

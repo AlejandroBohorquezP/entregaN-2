@@ -1,0 +1,92 @@
+{{>header}}
+
+<h2 align="center">BIENVENIDO A LA SECCIÓN PARA LA {{titulocC}}</h2>
+
+{{#if mensajeSuccess}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Atención:</strong> {{mensajeSuccess}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
+{{#if mensajeError}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Atención:</strong> {{mensajeError}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
+<form action="/crearCursos" method="post" class="row g-3">
+
+<div class="col col-lg-auto"></div>
+
+  <div class="col-md-3">
+    <label for="inputPassword4" class="form-label">Identificación del curso</label>
+    <input  class="form-control" type="number" name="idCurso">
+    <br>
+    <br>
+  </div>
+
+  <div class="col col-lg-6">
+    <label for="inputEmail4" class="form-label">Nombre del curso</label>
+    <input class="form-control" type="text" name="nombreCurso" >
+    <br>
+    <br>
+  </div>
+
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Intensidad horaria</label>
+    <input class="form-control" type="number" name="intensidad">
+    <br>
+    <br>
+  
+  </div>
+  
+    <div class="col col-lg-auto">  </div>  <div class="col col-lg-auto">  </div>  <div class="col col-lg-auto">  </div>
+
+  <div class="col col-lg-6">
+    <label for="inputAddress" class="form-label">Descripción del curso</label>
+    <input  class="form-control" type="text" name="descripcion">
+    <br>
+    <br>
+  </div>
+
+ 
+  <div class="col-md-3">
+    <label for="inputCity" class="form-label">Valor del curso</label>
+    <input class="form-control" type="number" name="valor" value='$'>
+    <br>
+  </div>
+
+  
+
+ <div class="col-md-2">
+    <label for="inputState" class="form-label"> Modalidad </label>
+      <div>
+          <select id="modalidad" name="modalidad" class="form-select">
+            <option name="Virtual" value="Virtual">Virtual</option>
+            <option name="Presencial" value="Presencial">Presencial</option>
+          </select>
+      </div>
+    <br>
+    <br>
+ </div>
+ </div>
+
+  <div class="col col-lg-auto"> </div>
+<div class="col-md-2"> 
+   <div class="col-12">
+    <button type="submit" class="btn btn-primary">CREAR CURSO</button>
+  </div>
+</form>
+</div>
+ 
+ {{#if message}}
+<div class="alert alert-success">{{message}}</div>
+{{/if}}
+
+{{>footer}}

@@ -1,0 +1,104 @@
+{{>header}}
+<h2 align="center">BIENVENIDO A LA SECCIÓN PARA LA {{tituloiE}}</h2>
+
+{{#if mensajeSuccess}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Atención:</strong> {{mensajeSuccess}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
+{{#if mensajeError}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Atención:</strong> {{mensajeError}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
+<form action="/inscribirEstu" method="post" class="row g-3">
+
+<div class="col col-lg-auto">  </div>
+  <div class="col col-lg-6">
+    <label for="inputEmail4" class="form-label">Nombre del estudiante</label>
+    <input class="form-control" type="text" name="nombreEstudiante">
+    <br>
+    <br>
+  </div>
+
+<div class="col-md-2">
+    <label for="inputState" class="form-label"> Tipo de documento </label>
+      <div>
+          <select id="documento" name="documento" class="form-select">
+            <option name="cedula" value="Cédula de ciudadanía">Cédula de ciudadanía(C.C)</option>
+            <option name="tarjeta" value="tarjeta de identidad">Tarjeta de identidad(T.I)</option>
+          </select>
+      </div>
+    <br>
+    <br>
+ </div>
+ </div>
+
+  <div class="col-md-3">
+    <label for="inputPassword4" class="form-label">Número de identificación </label>
+    <input class="form-control" type="bumber" name="idEstudiante">
+    <br>
+    <br>
+  </div>
+
+<div class="col col-lg-auto">  </div>  <div class="col col-lg-auto">  </div>  <div class="col col-lg-auto">  </div>
+  
+  
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Teléfono</label>
+    <input class="form-control" type="text" name="telefono" >
+    <br>
+    <br>
+  
+  </div>
+  
+
+  
+
+ 
+  <div class="col-md-3">
+    <label for="inputCity" class="form-label">Correo</label>
+    <input type="text" class="form-control" id="inputCity" name="correo">
+    <br>
+    <br>
+  </div>
+
+   <div class="col-md-2">
+    <label for="inputState" class="form-label"> Cursos </label>
+      <div>
+          <select id="idCurso" name="idCurso" class="form-select">
+            {{#each cursos}}    
+            <option name="{{this.idCurso}}" value="{{this.idCurso}}">{{this.nombreCurso}}</option>
+            {{/each}}
+          </select>
+      </div>
+    <br>
+    <br>
+ </div>
+
+  
+<div class="col col-lg-auto">  </div>  <div class="col col-lg-auto">  </div>  <div class="col col-lg-auto">  </div>
+ 
+ <br>
+    <br>
+  <div class="col col-lg-auto"> </div>
+<div class="col-md-2"> 
+   <div class="col-12">
+    <button type="submit" class="btn btn-primary" onclick="location.href='/verCursos'">Guardar</button>
+  </div>
+
+</div>
+</form>
+
+ {{#if message}}
+<div class="alert alert-success">{{message}}</div>
+{{/if}}
+{{>footer}}

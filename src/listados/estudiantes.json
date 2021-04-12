@@ -1,0 +1,42 @@
+[
+  {
+    "nombreEstudiante": "Sebastián Ramirez",
+    "idEstudiante": 43992843,
+    "telefono": 94930201,
+    "correo": "esacosa@gmail.com",
+    "documento": "Cédula de ciudadanía",
+    "idCurso": 8573
+  },
+  {
+    "nombreEstudiante": "Alejandro",
+    "idEstudiante": 2323,
+    "telefono": 4422,
+    "correo": "marialejo14@gmail.com",
+    "documento": "Cédula de ciudadanía",
+    "idCurso": 1431
+  },
+  {
+    "nombreEstudiante": "23232",
+    "idEstudiante": 4355,
+    "telefono": 6576,
+    "correo": "aswbxhsw@gmail.com",
+    "documento": "Cédula de ciudadanía",
+    "idCurso": 1431
+  },
+  {
+    "nombreEstudiante": "Alejandrodk",
+    "idEstudiante": 9,
+    "telefono": 8998,
+    "correo": "asmdksmd@gmai..com",
+    "documento": "tarjeta de identidad",
+    "idCurso": 1431
+  },
+  {
+    "nombreEstudiante": "aresf",
+    "idEstudiante": 78,
+    "telefono": 5643,
+    "correo": "amskldmsakl@gmail.cim",
+    "documento": "tarjeta de identidad",
+    "idCurso": 1431
+  }
+]

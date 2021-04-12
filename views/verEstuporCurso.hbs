@@ -1,0 +1,20 @@
+{{>header}}
+
+Estudiamtes registrados en el curso <strong>{{nombreCurso}}</strong>
+<br>
+<br>
+<table class="table table-striped">
+  <tbody>
+     <tr>
+      <th scope="col">Nombre del estudiante</th>
+    </tr>
+    {{#each estudiantes}}
+        <tr>
+            <td>{{this.nombreEstudiante}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+{{>footer}}

@@ -1,0 +1,129 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+{{>header}}
+
+<h2 align="center" >BIENVENIDO A LA PÁGINA PARA LA {{titulovC}}</h2>
+
+<br>    
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre del curso</th>
+      <th scope="col">Costo</th>
+       <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each cursos}}
+      
+    <tr>
+      <th scope="row">{{this.idCurso}}</th>
+      <td>{{this.nombreCurso}}</td>
+      <td>{{this.valor}}</td>
+      <td> <button type="button" class="btn btn-outline-dark btn-detalle" data-descripcion="{{this.descripcion}}" data-modalidad="{{this.modalidad}}">
+              VER DETALLES
+            </button>
+      </td>}
+      <td>   
+            <form action="/verEstuporCurso" method="post">
+            <button class="btn btn-outline-dark" >
+              VER ESTUDIANTES INSCRITOS
+            </button>
+            <input type="text" value="{{this.idCurso}}" name="idCurso2" style="display: none;">
+            <input type="text" value="{{this.nombreCurso}}" name="nombreCurso" style="display: none;">
+            </form>
+      </td>     
+       <td>
+          <form action="/eliminarCurso" method="post">
+          <button class="btn btn-outline-dark">Eliminar</button>
+          <input type="text" value="{{this.idCurso}}" name="idCurso" style="display: none;">
+          </form>
+       </td>
+    </tr>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+ 
+ 
+     
+
+
+<div class="modal fade" id="modalDetalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">DETALLES DEL CURSO</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+
+<th>
+       <td><label>Descripcion</label> <div id="descripcion"></div></td>
+        <td><label>Modalidad</label>   <div id="modalidad"></div></td>
+</th>
+</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- <div class="modal fade" id="modalEstudiantes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Lista de estudiantes matriculados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+            <table class="table table-striped">
+
+<th>
+       <td><label>Nombre del curso</label> <div id="nombreCurso"></div></td>
+        <td><label>Nombre del estudiante</label><div id="nombreEstudiante"></div></td>
+</th>
+</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+{{>footer}}
+
+
+
+<script>  
+   $(function () {
+     console.log();
+
+     $('.btn-detalle').click(function() {
+        $('#descripcion').text($(this).attr('data-descripcion'));
+        $('#modalidad').text($(this).attr('data-modalidad'));
+        $('#modalDetalles').modal('show');
+     });
+
+     {{!-- $('.btn-alumnos').click(function() {
+        $('#nombreCurso').text($(this).attr('data-nombreCurso'));
+        $('#nombreEstudiante').text($(this).attr('data-nombreEstudiante'));
+
+        $('#modalEstudiantes').modal('show');
+     }); --}}
+
+   });
+</script>
