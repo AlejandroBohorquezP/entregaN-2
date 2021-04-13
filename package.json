@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "crearCursos",
-  "start": "node src/app.js",
+  "start": "src/app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "boostrap": "^2.0.0",
