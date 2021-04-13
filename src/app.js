@@ -43,7 +43,7 @@ app.set('view engine', 'hbs');
 
 
 
-app.get('/crearCursos', (req, res) =>{
+app.get('/', (req, res) =>{
     res.render('crearCursos', {
         titulocC: 'INSCRIPCIÓN DE CURSOS'
     });
