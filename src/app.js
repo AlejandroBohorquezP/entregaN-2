@@ -49,6 +49,7 @@ app.get('/', (req, res) =>{
     });
 })
 
+
 app.get('/verCursos', (req, res) =>{
     let cursos = fs.readFileSync('src/listados/cursos.json');
 
