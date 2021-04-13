@@ -193,10 +193,10 @@ console.log(__dirname)
 
 
 const port = process.env.PORT || 3000;
-
 app.listen(port, () => {
-    console.log('Se está escuchando en el puerto 3000'+ port)
+    console.log('Puesto en el puerto 3000'+ port)
 });
+
 
 
 
