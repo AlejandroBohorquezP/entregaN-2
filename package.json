@@ -1,0 +1,32 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "boostrap": "^2.0.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "jquery": "^3.6.0",
+    "pkg": "^4.5.1",
+    "bootstrap": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroBohorquezP/entregaN-2.git"
+  },
+  "author": "AlejandroPuerta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlejandroBohorquezP/entregaN-2/issues"
+  },
+  "homepage": "https://github.com/AlejandroBohorquezP/entregaN-2#readme"
+}
